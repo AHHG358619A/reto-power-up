@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: plazoleta-service
+
+  cloud:
+    config:
+      uri: http://localhost:8081
+      username: root
+      password: root
+      profile: dev
+
+appDescription: "Pragma Powerup"
+appVersion: "1.0.0"
