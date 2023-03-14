@@ -13,7 +13,7 @@ public class UserResponseDto {
 
     private String lastName;
 
-    private String description;
+    private String identityDocument;
 
     private String cellPhone;
 

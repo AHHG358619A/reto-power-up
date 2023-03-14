@@ -11,7 +11,7 @@ public class UserRequestDto {
 
     private String lastName;
 
-    private String description;
+    private String identityDocument;
 
     private String cellPhone;
 

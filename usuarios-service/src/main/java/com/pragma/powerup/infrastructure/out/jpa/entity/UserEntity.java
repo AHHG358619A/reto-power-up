@@ -34,10 +34,10 @@ public class UserEntity {
     @Column(name = "apellido", nullable = false, length = 100)
     private String lastName;
 
-    @Column(name = "descripcion", nullable = false, length = 100)
-    private String description;
+    @Column(name = "documento_identidad", nullable = false, length = 50)
+    private String identityDocument;
 
-    @Column(name = "celular", nullable = false, length = 100)
+    @Column(name = "celular", nullable = false, length = 13)
     private String cellPhone;
 
     @Column(name = "correo", nullable = false, length = 100)

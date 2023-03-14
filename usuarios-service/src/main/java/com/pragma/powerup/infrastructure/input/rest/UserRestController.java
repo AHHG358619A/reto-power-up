@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,6 +27,7 @@ import java.util.List;
 public class UserRestController {
 
     private final IUserHandler userHandler;
+    private final PasswordEncoder passwordEncoder;
 
     @Operation(summary = "Add a new user")
     @ApiResponses(value = {
@@ -34,6 +36,10 @@ public class UserRestController {
     })
     @PostMapping("/")
     public ResponseEntity<Void> saveUser(@RequestBody UserRequestDto userRequestDto) {
+        if (userRequestDto.getPassword() != null && !userRequestDto.getPassword().isEmpty()) {
+            String passwordEncode = passwordEncoder.encode(userRequestDto.getPassword());
+            userRequestDto.setPassword(passwordEncode);
+        }
         userHandler.saveUser(userRequestDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
