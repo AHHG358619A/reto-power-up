@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-14T12:02:26-0500",
+    date = "2023-03-14T16:29:59-0500",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 11.0.17 (Oracle Corporation)"
 )
 @Component
@@ -23,10 +23,11 @@ public class IUserRequestMapperImpl implements IUserRequestMapper {
 
         userModel.setName( userRequestDto.getName() );
         userModel.setLastName( userRequestDto.getLastName() );
-        userModel.setDescription( userRequestDto.getDescription() );
+        userModel.setIdentityDocument( userRequestDto.getIdentityDocument() );
         userModel.setCellPhone( userRequestDto.getCellPhone() );
         userModel.setEmail( userRequestDto.getEmail() );
         userModel.setPassword( userRequestDto.getPassword() );
+        userModel.setRol( userRequestDto.getRol() );
 
         return userModel;
     }

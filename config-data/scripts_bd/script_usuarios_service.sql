@@ -21,3 +21,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     PRIMARY KEY (id),
 	FOREIGN KEY (rol_id) REFERENCES roles(id)
 );
+
+INSERT INTO roles (id, nombre, descripcion) VALUES (1, 'ADMINISTRADOR', 'Rol para administradores del sistema');
+INSERT INTO roles (id, nombre, descripcion) VALUES (2, 'PROPIETARIO', 'Rol para propietarios de restaurantes');
+INSERT INTO roles (id, nombre, descripcion) VALUES (2, 'EMPLEADO', 'Rol para empleados de restaurantes');
+INSERT INTO roles (id, nombre, descripcion) VALUES (2, 'CLIENTE', 'Rol para cliente de restaurantes');

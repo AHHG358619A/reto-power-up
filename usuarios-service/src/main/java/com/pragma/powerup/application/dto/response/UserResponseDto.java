@@ -20,4 +20,6 @@ public class UserResponseDto {
     private String email;
 
     private String password;
+
+    private Long rol;
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-14T12:02:26-0500",
+    date = "2023-03-14T16:29:58-0500",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 11.0.17 (Oracle Corporation)"
 )
 @Component
@@ -26,10 +26,11 @@ public class IUserResponseMapperImpl implements IUserResponseMapper {
         userResponseDto.setId( userModel.getId() );
         userResponseDto.setName( userModel.getName() );
         userResponseDto.setLastName( userModel.getLastName() );
-        userResponseDto.setDescription( userModel.getDescription() );
+        userResponseDto.setIdentityDocument( userModel.getIdentityDocument() );
         userResponseDto.setCellPhone( userModel.getCellPhone() );
         userResponseDto.setEmail( userModel.getEmail() );
         userResponseDto.setPassword( userModel.getPassword() );
+        userResponseDto.setRol( userModel.getRol() );
 
         return userResponseDto;
     }
